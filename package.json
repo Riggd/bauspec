@@ -1,0 +1,41 @@
+{
+  "name": "bauspec",
+  "version": "1.0.0",
+  "description": "Zero-dependency spec-driven development. Turn brainstorms into agent-executable specs.",
+  "type": "module",
+  "bin": {
+    "bauspec": "./bin/bauspec.mjs"
+  },
+  "files": [
+    "bin/",
+    "templates/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "spec-driven-development",
+    "sdd",
+    "ai-coding",
+    "product-requirements",
+    "prd",
+    "architecture",
+    "developer-tools",
+    "claude-code",
+    "cursor",
+    "antigravity",
+    "vibe-coding",
+    "ai-agents",
+    "bauspec"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riggd/bauspec"
+  },
+  "homepage": "https://github.com/riggd/bauspec#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
