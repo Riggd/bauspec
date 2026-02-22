@@ -16,12 +16,20 @@ echo ""
 echo "Creating GitHub repo: $USERNAME/$REPO_NAME"
 echo ""
 
-# 1. Initialize git
+# 1. Update placeholders
+echo "Updating YOUR_USERNAME placeholders to $USERNAME..."
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' "s/YOUR_USERNAME/$USERNAME/g" README.md install.sh package.json bin/bauspec.mjs
+else
+  sed -i "s/YOUR_USERNAME/$USERNAME/g" README.md install.sh package.json bin/bauspec.mjs
+fi
+
+# 2. Initialize git
 git init
 git add .
 git commit -m "Initial commit — Bauspec v1.0.0"
 
-# 2. Create the GitHub repo (public, with description)
+# 3. Create the GitHub repo (public, with description)
 gh repo create "$REPO_NAME" \
   --public \
   --description "Zero-dependency spec-driven development. Turn brainstorms into agent-executable specs." \
@@ -29,12 +37,12 @@ gh repo create "$REPO_NAME" \
   --remote origin \
   --push
 
-# 3. Mark as a template repo (for the "Use this template" button)
+# 4. Mark as a template repo (for the "Use this template" button)
 gh api -X PATCH "repos/$USERNAME/$REPO_NAME" \
   -f is_template=true \
   --silent
 
-# 4. Set topics
+# 5. Set topics
 gh repo edit "$USERNAME/$REPO_NAME" \
   --add-topic spec-driven-development \
   --add-topic ai-coding \
@@ -50,7 +58,5 @@ echo "✓ Marked as template repo"
 echo "✓ Topics added"
 echo ""
 echo "Next steps:"
-echo "  1. Replace YOUR_USERNAME with $USERNAME in README.md, install.sh, package.json"
-echo "     sed -i 's/YOUR_USERNAME/$USERNAME/g' README.md install.sh package.json bin/bauspec.mjs"
-echo "  2. npm publish (when ready)"
+echo "  1. npm publish (when ready)"
 echo ""
