@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write
+      id-token: write # Required for OIDC
 
     steps:
       - name: Checkout repository
@@ -29,8 +29,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '22.x' # Must be >= 22.14.0
           registry-url: 'https://registry.npmjs.org/'
+
+      - name: Upgrade npm
+        run: |
+          npm install -g npm@latest
+          npm --version                   # Verify >= 11.5.1
+
+      - name: Verify OIDC availability
+        run: |
+          if [ -n "${ACTIONS_ID_TOKEN_REQUEST_URL}" ]; then
+            echo "✅ OIDC token available"
+          else
+            echo "❌ OIDC token NOT available"
+            exit 1
+          fi
 
       - name: Configure Git User
         run: |
@@ -43,7 +57,7 @@ jobs:
 
       - name: Publish to npm
         run: npm publish --access public
-        
+
       - name: Push changed files & tags
         run: |
           git push origin HEAD:main --follow-tags

@@ -36,6 +36,6 @@
   },
   "homepage": "https://github.com/Riggd/bauspec#readme",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.14.0"
   }
 }
