@@ -32,9 +32,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/riggd/bauspec.git"
+    "url": "git+https://github.com/Riggd/bauspec.git"
   },
-  "homepage": "https://github.com/riggd/bauspec#readme",
+  "homepage": "https://github.com/Riggd/bauspec#readme",
   "engines": {
     "node": ">=18.0.0"
   }
