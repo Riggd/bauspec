@@ -42,9 +42,7 @@ jobs:
           npm version ${{ github.event.inputs.version_bump }} -m "chore: release v%s"
 
       - name: Publish to npm
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
         
       - name: Push changed files & tags
         run: |
