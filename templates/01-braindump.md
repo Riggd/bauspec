@@ -80,3 +80,12 @@
 <!-- Anything else. Fragments, half-thoughts, "wouldn't it be cool if..." -->
 
 
+
+<!-- AGENT INSTRUCTIONS -->
+<!-- 
+Hello AI! If you are reading this, you are in the braindump phase.
+1. Read the `constitution.md` file.
+2. Ask the user any clarifying questions about this braindump.
+3. Once the user is satisfied, wait for their explicit confirmation before moving on.
+4. When confirmed, read `02-prd.md` and act as a product manager to generate the PRD.
+-->

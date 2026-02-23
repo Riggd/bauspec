@@ -128,3 +128,12 @@
 | # | Question | Answer | Date |
 |---|----------|--------|------|
 | 1 | | | |
+
+<!-- AGENT INSTRUCTIONS -->
+<!--
+Hello AI! If you generated this PRD:
+1. Stop and ask the user to review.
+2. Ensure all "Open Decisions" and "Clarification Log" are resolved.
+3. Once the user approves, wait for their explicit confirmation to proceed.
+4. When confirmed, read `03-architecture.md` and act as a technical architect to generate the architecture.
+-->

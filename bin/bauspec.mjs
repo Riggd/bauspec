@@ -262,7 +262,7 @@ function generateAgentSuggestions(configs, specsDir) {
             agent: 'Claude Code',
             file: config.path,
             action: 'Add Bauspec context to CLAUDE.md',
-            snippet: `\n# Bauspec Specs\nProject specifications live in \`${relativeSpecs}/\`. Always read \`${relativeSpecs}/constitution.md\` before making changes. When implementing features, follow the stories in \`${relativeSpecs}/04-stories.md\` or the relevant feature folder under \`${relativeSpecs}/features/\`.`,
+            snippet: `\n# Bauspec Specs\nProject specs live in \`${relativeSpecs}/\`. At each step of the spec-driven process, carefully follow the \`<!-- AGENT INSTRUCTIONS -->\` at the bottom of the relevant document (e.g. 01-braindump.md) to guide the user sequentially. Always read \`${relativeSpecs}/constitution.md\` before making changes.`,
           });
         }
         if (config.type === 'skills directory') {
@@ -280,7 +280,7 @@ function generateAgentSuggestions(configs, specsDir) {
           agent: 'Cursor',
           file: config.path,
           action: `Add Bauspec awareness to ${config.path}`,
-          snippet: `\nAlways read \`${relativeSpecs}/constitution.md\` for project principles before generating code. Implementation stories are in \`${relativeSpecs}/04-stories.md\`.`,
+          snippet: `\nAlways read \`${relativeSpecs}/constitution.md\` for project principles before generating code. When creating specs, follow the \`<!-- AGENT INSTRUCTIONS -->\` at the bottom of each spec file.`,
         });
         break;
 
@@ -289,7 +289,7 @@ function generateAgentSuggestions(configs, specsDir) {
           agent: 'GitHub Copilot',
           file: config.path,
           action: `Add Bauspec context to ${config.path}`,
-          snippet: `\nProject specs and architecture decisions are documented in \`${relativeSpecs}/\`. Refer to \`${relativeSpecs}/constitution.md\` for coding standards and constraints.`,
+          snippet: `\nProject specs and architecture decisions are documented in \`${relativeSpecs}/\`. When generating specs, follow the \`<!-- AGENT INSTRUCTIONS -->\` at the bottom of each file. Refer to \`${relativeSpecs}/constitution.md\` for standards.`,
         });
         break;
 
@@ -298,7 +298,7 @@ function generateAgentSuggestions(configs, specsDir) {
           agent: config.agent,
           file: config.path,
           action: `Add Bauspec context to ${config.path}`,
-          snippet: `\n# Project Specifications\nAll product requirements, architecture decisions, and implementation stories are in \`${relativeSpecs}/\`. Start with \`${relativeSpecs}/constitution.md\` for project principles.`,
+          snippet: `\n# Project Specifications\nSpecs are in \`${relativeSpecs}/\`. When running the spec-driven process, follow the \`<!-- AGENT INSTRUCTIONS -->\` at the bottom of each file. Start with \`${relativeSpecs}/constitution.md\` for principles.`,
         });
         break;
 

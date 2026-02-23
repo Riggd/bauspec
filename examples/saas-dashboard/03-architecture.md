@@ -251,3 +251,12 @@ CREATE POLICY "Users read own metrics" ON daily_metrics FOR SELECT USING (auth.u
    - `SUPABASE_SERVICE_ROLE_KEY`
 5. Deploy to Vercel, set env vars in Vercel dashboard
 6. After first user connects Stripe: register webhook URL `https://[domain]/api/v1/stripe/webhook` in Stripe dashboard
+
+<!-- AGENT INSTRUCTIONS -->
+<!--
+Hello AI! If you generated this architecture document:
+1. Stop and ask the user to review.
+2. Ensure all decisions and setups are fully documented.
+3. Once the user approves, wait for their explicit confirmation to proceed.
+4. When confirmed, read `04-stories.md` and act as an engineering manager to generate the development stories.
+-->

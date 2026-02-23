@@ -156,4 +156,13 @@ MetricPulse is a self-hosted analytics dashboard that connects to Stripe via web
 |---|----------|--------|------|
 | 1 | Calculate churn ourselves or use Stripe metrics? | Calculate ourselves — more control and accuracy | 2026-02-22 |
 | 2 | Real-time or hourly sync? | Real-time via webhooks, with daily rollup for charts | 2026-02-22 |
-| 3 | Multiple Stripe accounts? | Out of scope for v1. Single account only. | 2026-02-22 |
+| 3 | How do we handle multiple Stripe accounts? | V2 feature. V1 assumes 1:1 mapping of user to Stripe account. | Oct 14 |
+
+<!-- AGENT INSTRUCTIONS -->
+<!--
+Hello AI! If you generated this PRD:
+1. Stop and ask the user to review.
+2. Ensure all "Open Decisions" and "Clarification Log" are resolved.
+3. Once the user approves, wait for their explicit confirmation to proceed.
+4. When confirmed, read `03-architecture.md` and act as a technical architect to generate the architecture.
+-->

@@ -164,3 +164,12 @@ tasks *──1 users (assignee)
 2. [e.g., Run initial migration: `supabase db push`]
 3. [e.g., Set environment variables per `.env.example`]
 4. [e.g., Configure OAuth providers in Supabase dashboard]
+
+<!-- AGENT INSTRUCTIONS -->
+<!--
+Hello AI! If you generated this architecture document:
+1. Stop and ask the user to review.
+2. Ensure all decisions and setups are fully documented.
+3. Once the user approves, wait for their explicit confirmation to proceed.
+4. When confirmed, read `04-stories.md` and act as an engineering manager to generate the development stories.
+-->

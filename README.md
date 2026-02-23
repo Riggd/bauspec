@@ -92,31 +92,14 @@ npx bauspec add dark-mode
 # Architecture skipped — uses project-level
 ```
 
-### Handoff Prompts
+### Agentic Handoffs
 
-Copy-paste these when handing off between phases:
+You don't need to babysit the agent between phases. Bauspec templates include embedded `<!-- AGENT INSTRUCTIONS -->` that guide the AI.
 
-**Braindump → PRD:**
-```
-Read my braindump at specs/01-braindump.md and my project constitution at
-specs/constitution.md. Produce a PRD following the template at specs/02-prd.md.
-Ask me clarifying questions before writing if anything is ambiguous.
-```
+To start the process, just tell your agent:
+> "Read `specs/01-braindump.md` and follow its instructions."
 
-**PRD → Architecture:**
-```
-Read the PRD at specs/02-prd.md and constitution at specs/constitution.md.
-Produce a technical architecture document following specs/03-architecture.md.
-Flag any PRD requirements that conflict or need clarification.
-```
-
-**Architecture → Stories:**
-```
-Read the PRD (specs/02-prd.md), architecture (specs/03-architecture.md), and
-constitution (specs/constitution.md). Break these into agent-executable dev
-stories following specs/04-stories.md. Each story should be independently
-implementable with full context embedded.
-```
+The agent will automatically read the constitution, ask clarifying questions, and prompt you for approval before generating the PRD, Architecture, and Stories in sequence.
 
 ## Agent Config Detection
 
